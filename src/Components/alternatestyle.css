@@ -1,0 +1,78 @@
+.content {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    margin-top: 30px;
+}
+
+.element {
+    padding: 1px;
+    border: 1px solid grey;
+    box-shadow: 20px 20px 50px black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: transform 0.2s linear;
+    width: 100%; /* Full width on mobile */
+}
+
+.element:hover {
+    transform: scale(1.1);
+    border: 1px solid green;
+}
+
+.image {
+    justify-content: center;
+    max-height: 50%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Baskerville, serif;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+.description {
+    font-family: Palatino, serif;
+    color: darkcyan;
+}
+
+.maincontent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: 80vh; /* Set a maximum height */
+    overflow-y: auto; /* Add vertical scroll when content exceeds max height */
+    padding: 2px;
+}
+
+@media only screen and (min-width: 1080px) and (min-height:1920px) {
+    .maincontent{
+        display: block;
+        padding: 10px;
+    }
+    
+    .element {
+      width: 80px; /* Full width on mobile */
+    }
+  
+    .image{
+        justify-content: center;
+        max-height: 40px;
+        object-fit: cover;
+        width: 60px;
+        border-radius: 5px;
+        /*box-shadow: 10px 10px 40px rosybrown*/;
+    }
+}
