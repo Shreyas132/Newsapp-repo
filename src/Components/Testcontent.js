@@ -54,10 +54,12 @@ const Testcontent = () => {
 
             <div className='prevnext'>
                 <button className='prev' disabled={currentPage === 1} onClick={() => handlePageChange(currentPage - 1)}>
+                <span className="arrow">&lt;</span>
                     
                 </button>
-                <span style={{color:'white',margin:'20px 5px 0px 5px'}}> Page: {`${currentPage}`}</span>
+                <span style={{color:'green',margin:'20px 5px 0px 5px'}}> Page no: {`${currentPage}`}</span>
                 <button  className="next"disabled={endIndex >= articles.length} onClick={() => handlePageChange(currentPage + 1)}>
+                <span className="arrow">&gt;</span>
                     
                 </button>
             </div>

@@ -104,30 +104,35 @@ const Navbar = ({ click }) => {
   return (
     <nav className="nav">
       <div className='logo'>
-        <img src={l} alt='image of a logo' />
+        <img src={l} alt=""/>
       </div>
       <ul className='items'>
-        <li><a className="link" >Home</a> </li>
-        <li><a className={selectedcategory === 'Technology' ? 'link active' : 'link' } onClick={() => handleclick("Technology")}>Technology</a> </li>
-        <li><a className={selectedcategory === 'Sports' ? 'link active' : 'link' } onClick={() => handleclick("Sports")}>Sports</a> </li>
-        <li><a className={selectedcategory === 'politics' ? 'link active' : 'link' } onClick={() => handleclick("politics")}>Politics</a> </li>
-        <li><a className={selectedcategory === 'Finance' ? 'link active' : 'link' } onClick={() => handleclick("Finance")}>Financial</a> </li>
-        <li><a className={selectedcategory === 'Automobile' ? 'link active' : 'link' } onClick={() => handleclick("Automobile")}>Automobile</a> </li>
+        <li><button className="link" >Home </button> </li>
+        <li><button className={selectedcategory === 'Technology' ? 'link active' : 'link' } onClick={() => handleclick("Technology")}>Technology</button> </li>
+        <li><button className={selectedcategory === 'Sports' ? 'link active' : 'link' } onClick={() => handleclick("Sports")}>Sports</button> </li>
+        <li><button className={selectedcategory === 'politics' ? 'link active' : 'link' } onClick={() => handleclick("politics")}>Politics</button> </li>
+        <li><button className={selectedcategory === 'Finance' ? 'link active' : 'link' } onClick={() => handleclick("Finance")}>Financial</button> </li>
+        <li><button className={selectedcategory === 'Automobile' ? 'link active' : 'link' } onClick={() => handleclick("Automobile")}>Automobile</button> </li>
 
-        <label htmlFor="category"
-        style={{
-          color:'green',
-        }}>More: </label>
-        <select id='category' className='catstyle' name='categories' onChange={(e) => handleclick(e.target.value)}>
-          <option value="Movies"></option>
-          <option value="Movies">Movies</option>
-          <option value="Music">Music</option>
-          <option value="Economy">Economy</option>
-          <option value="Trading">Trading</option>
-          <option value="Crime">Crime</option>
-          <option value="Election">Election</option>
-          <option value="World">World</option>
-        </select>
+          <ul className='drop'>
+            <li className="nav-item dropdown"> {/* Add 'dropdown' class */}
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      More
+                    </a>
+                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a className="dropdown-item" onClick={() => handleclick("Movies")}>Movies</a></li>
+                      <li><a className="dropdown-item" onClick={() => handleclick("Music")}>Music</a></li>
+                      <li><a className="dropdown-item" onClick={() => handleclick("Crime")}>Crime</a></li>
+                      <li><a className="dropdown-item" onClick={() => handleclick("Economy")}>Economy</a></li>
+                      <li><a className="dropdown-item" onClick={() => handleclick("Trading")}>Trading</a></li>
+                      <li><a className="dropdown-item" onClick={() => handleclick("World")}>World</a></li>
+                      <li><a className="dropdown-item" onClick={() => handleclick("India")}>India</a></li>
+                      <li><hr className="dropdown-divider" /></li>
+                      <li><a className='dropdown-item'></a>About us</li>
+                    </ul>
+            </li>
+
+        </ul>
       </ul>
       <div className='search'>
         <input className="txt" type="text" value={search} placeholder='Search here' onChange={(e)=>searchfeature(e)}></input>
@@ -156,14 +161,15 @@ const Navbar = ({ click }) => {
           <div className='submenu'>
             <ul className='subview'>
               <li onClick={()=> togglesubmenu('sub1')}>
-                <span>Sports</span>
-                <ul className='sub-list' style={{ display:expand.includes('sub1') ? 'block' : 'none'}}>
-                  <li>Cricket</li>
-                  <li>Football</li>
-                  <li>Soccer</li>
-                  <li>F1</li>
-                  <li>Basketball</li>
-                </ul>
+                <li><a className="dropdown-item" onClick={() => handleclick("Movies")}>Movies</a></li>
+                    <li><a className="dropdown-item" onClick={() => handleclick("Music")}>Music</a></li>
+                    <li><a className="dropdown-item" onClick={() => handleclick("Crime")}>Crime</a></li>
+                    <li><a className="dropdown-item" onClick={() => handleclick("Economy")}>Economy</a></li>
+                    <li><a className="dropdown-item" onClick={() => handleclick("Trading")}>Trading</a></li>
+                    <li><a className="dropdown-item" onClick={() => handleclick("World")}>World</a></li>
+                    <li><a className="dropdown-item" onClick={() => handleclick("India")}>India</a></li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li><a className='dropdown-item'></a>About us</li>                <li>Help</li>
               </li>
             </ul>
           </div>

@@ -2,6 +2,9 @@ import './App.css';
 // import Contents from './Components/Contents';
 import Testcontent from './Components/Testcontent';
 // import Sidebar from './Components/Sidebar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 function App() {
   return (
