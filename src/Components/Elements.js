@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import "./Styling.css"
 // import "./head.css"
 // import "./alternatestyle.css"

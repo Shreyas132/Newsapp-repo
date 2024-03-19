@@ -120,15 +120,15 @@ const Navbar = ({ click }) => {
                       More
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a className="dropdown-item" onClick={() => handleclick("Movies")}>Movies</a></li>
-                      <li><a className="dropdown-item" onClick={() => handleclick("Music")}>Music</a></li>
-                      <li><a className="dropdown-item" onClick={() => handleclick("Crime")}>Crime</a></li>
-                      <li><a className="dropdown-item" onClick={() => handleclick("Economy")}>Economy</a></li>
-                      <li><a className="dropdown-item" onClick={() => handleclick("Trading")}>Trading</a></li>
-                      <li><a className="dropdown-item" onClick={() => handleclick("World")}>World</a></li>
-                      <li><a className="dropdown-item" onClick={() => handleclick("India")}>India</a></li>
+                      <li><button  className="dropdown-item" onClick={() => handleclick("Movies")}>Movies</button></li>
+                      <li><button  className="dropdown-item" onClick={() => handleclick("Music")}>Music</button></li>
+                      <li><button  className="dropdown-item" onClick={() => handleclick("Crime")}>Crime</button></li>
+                      <li><button className="dropdown-item" onClick={() => handleclick("Economy")}>Economy</button></li>
+                      <li><button  className="dropdown-item" onClick={() => handleclick("Trading")}>Trading</button></li>
+                      <li><button  className="dropdown-item" onClick={() => handleclick("World")}>World</button></li>
+                      <li><button  className="dropdown-item" onClick={() => handleclick("India")}>India</button></li>
                       <li><hr className="dropdown-divider" /></li>
-                      <li><a className='dropdown-item'></a>About us</li>
+                      <li><button  className='dropdown-item'></button>About us</li>
                     </ul>
             </li>
 
@@ -154,22 +154,17 @@ const Navbar = ({ click }) => {
         cursor:'pointer',
         position:'absolute',
         listStyle:'none',
-        color:'blueviolet'
+        color:'black'
         // position: "absolute"
         }}>
 
           <div className='submenu'>
             <ul className='subview'>
               <li onClick={()=> togglesubmenu('sub1')}>
-                <li><a className="dropdown-item" onClick={() => handleclick("Movies")}>Movies</a></li>
-                    <li><a className="dropdown-item" onClick={() => handleclick("Music")}>Music</a></li>
-                    <li><a className="dropdown-item" onClick={() => handleclick("Crime")}>Crime</a></li>
-                    <li><a className="dropdown-item" onClick={() => handleclick("Economy")}>Economy</a></li>
-                    <li><a className="dropdown-item" onClick={() => handleclick("Trading")}>Trading</a></li>
-                    <li><a className="dropdown-item" onClick={() => handleclick("World")}>World</a></li>
-                    <li><a className="dropdown-item" onClick={() => handleclick("India")}>India</a></li>
-                    <li><hr className="dropdown-divider" /></li>
-                    <li><a className='dropdown-item'></a>About us</li>                <li>Help</li>
+                      <li><button  className="dropdown-item" onClick={() => handleclick("Movies")}>Movies</button></li>
+                      <li><hr className="dropdown-divider" style={{color:"red"}}/></li>
+                      <li><button className='dropdown-item'></button>About us</li>    
+                      <li>Help</li>
               </li>
             </ul>
           </div>

@@ -193,13 +193,12 @@ ul{
     transform: translate(0, -11px) rotate(45deg);
 }
 .submenu{
-    max-width: fit-content;
+    max-width: 200px;
 }
 .subview{
     list-style: none;
     padding: 0;
-    background-color: transparent;
-    backdrop-filter: blur(25px);
+    background-color:white ;
 
 }
 .subview li{
