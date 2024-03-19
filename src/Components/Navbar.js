@@ -116,7 +116,7 @@ const Navbar = ({ click }) => {
 
           <ul className='drop'>
             <li className="nav-item dropdown"> {/* Add 'dropdown' class */}
-                    <button className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button className="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                       More
                     </button>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
